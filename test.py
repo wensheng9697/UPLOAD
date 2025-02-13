@@ -115,3 +115,6 @@ for episode in range(episodes):
         episode_reward += reward
         ddpg.train()
     print(f"Episode: {episode}, Reward: {episode_reward}")
+    # if episode % 10 == 0:
+    #     torch.save(ddpg.actor.state_dict(), "actor.pth")
+    #     torch.save(ddpg.critic.state_dict(), "critic.pth")
